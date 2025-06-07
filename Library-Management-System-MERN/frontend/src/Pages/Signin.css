@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+.signin-container {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: wheat;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+.signin-card {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    max-width: 350px;
+    margin: 40px auto;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    padding: 30px;
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Title */
+.signin-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Line Divider */
+.line {
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 2px solid rgb(245, 239, 239);
+    margin: 20px 0;
+}
+
+/* Person Type Switch */
+.persontype-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+/* Signin Fields */
+.signin-fields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.signin-fields label {
+    color: rgb(170, 166, 166);
+    text-align: left;
+    width: 100%; /* Ensure labels align properly */
+    margin-top: 20px;
+}
+
+/* Input Fields */
+.signin-textbox {
+    padding: 12px 15px;
+    margin-top: 8px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 16px;
+}
+
+.signin-textbox:focus {
+    border-color: #455ab1;
+}
+
+/* Login Button */
+.signin-button {
+    background-color: #455ab1;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 25px;
+    width: 100%; /* Make button width match form width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.signin-button:hover {
+    background-color: #3a4e91;
+}
+
+/* Forgot Password */
+.forget-pass {
+    text-align: center;
+    display: block;
+    margin-top: 15px;
+    color: #455ab1;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Signup Option */
+.signup-option {
+    background-color: rgb(69, 69, 185, 0.1);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 15px;
+}
+
+.signup-question {
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Responsive Styling */
+@media (max-width: 480px) {
+    .signin-card {
+        padding: 20px;
+    }
+
+    .signin-title {
+        font-size: 20px;
+    }
+
+    .signin-button {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .signin-textbox {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+

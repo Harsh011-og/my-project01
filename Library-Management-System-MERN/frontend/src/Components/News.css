@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/* Scoped Variables */
+.news-container {
+    --primary-color: #2C3E50;
+    --accent-color: #e74c3c;
+    --background-color: #f9f9f9;
+    --card-bg-color: #ffffff;
+    --text-color: #333;
+    --border-radius: 12px;
+}
+
+/* News Container */
+.news-container {
+    width: 100%;
+    background-color: var(--background-color);
+    padding: 40px 20px;
+}
+
+/* News Title */
+.news-title {
+    color: var(--primary-color);
+    font-size: 36px;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 20px; /* Adjusted margin for better spacing */
+    letter-spacing: 1px;
+}
+
+/* News Data */
+.news-data {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 boxes in a row */
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px; /* Added space between title and first container */
+}
+
+/* Subtitle Styling */
+.news-subtitle {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Event Card Styling */
+.news-competition-event,
+.news-quiz-event {
+    background-color: var(--card-bg-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--accent-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 150px;
+    height: auto;
+    overflow: visible;
+}
+
+/* Hover Effect */
+.news-competition-event:hover,
+.news-quiz-event:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+/* Event Title */
+.news-competition-event p:first-child,
+.news-quiz-event p:first-child {
+    font-weight: 700;
+    color: var(--accent-color);
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+/* Event Description */
+.news-competition-event p:last-child,
+.news-quiz-event p:last-child {
+    font-size: 16px;
+    color: var(--text-color);
+    line-height: 1.4;
+    overflow: visible;
+    white-space: normal;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 1024px) {
+    .news-data {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .news-title {
+        font-size: 30px;
+    }
+
+    .news-subtitle {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .news-data {
+        grid-template-columns: 1fr;
+    }
+
+    .news-title {
+        font-size: 24px;
+    }
+
+    .news-subtitle {
+        font-size: 20px;
+    }
+
+    .news-competition-event p:first-child,
+    .news-quiz-event p:first-child {
+        font-size: 18px;
+    }
+
+    .news-competition-event p:last-child,
+    .news-quiz-event p:last-child {
+        font-size: 14px;
+    }
+}

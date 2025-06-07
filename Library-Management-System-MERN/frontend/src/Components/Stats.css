@@ -1,0 +1,77 @@
+.stats {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f9; /* Soft background */
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Individual Stat Block */
+.stats-block {
+    height: 170px;
+    width: 150px;
+    border-radius: 12px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f9f9f9, #e8f0fe); /* Subtle gradient */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), 
+                -4px -4px 8px rgba(255, 255, 255, 0.7); /* Soft inner and outer shadows */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover Effect */
+.stats-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15), 
+                -6px -6px 12px rgba(255, 255, 255, 0.8);
+}
+
+/* Stats Icon */
+.stats-icon {
+    color: #ff4f4f; /* Modern red tone */
+    font-size: 50px;
+    margin-bottom: 5px;
+}
+
+/* Stats Title */
+.stats-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Stats Count */
+.stats-count {
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .stats-block {
+        width: 120px;
+        height: 140px;
+    }
+
+    .stats-icon {
+        font-size: 40px;
+    }
+
+    .stats-title {
+        font-size: 16px;
+    }
+
+    .stats-count {
+        font-size: 20px;
+    }
+}
