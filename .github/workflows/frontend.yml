@@ -27,10 +27,11 @@ jobs:
       - name: Install dependencies with Yarn
         run: yarn install
 
-      - name: Run frontend build (or start)
-        run: yarn build # change to `yarn start` only if you actually want to run dev server
+      - name: Run frontend build
+        run: yarn build
+        env:
+          NODE_OPTIONS: --openssl-legacy-provider
 
-      # Optional: Run tests if any
-      - name: Run tests
+      - name: Run tests (optional)
         run: yarn test
         continue-on-error: true
