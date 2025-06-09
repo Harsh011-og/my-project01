@@ -35,7 +35,9 @@ jobs:
 
       - name: Run tests (optional)
         working-directory: frontend
-        run: yarn test || echo "No tests found"
-
-      - name: Debug (optional)
-        run: ls -R
+        run: |
+          if yarn run | grep -q "test"; then
+            yarn test
+          else
+            echo "No test script found in package.json"
+          fi
